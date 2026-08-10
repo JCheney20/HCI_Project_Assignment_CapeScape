@@ -14,9 +14,30 @@ redesign.
 _Avoid_: "City" as a domain term (fine as plain English prose, not as an entity name)
 
 **Accessibility Profile**:
-A user-set record of accessibility needs and preferences (visual/mobility/hearing
-considerations, preferred language) that drives both recommendation ranking and UI
-adaptation (font size, contrast, voice-first mode).
+The subset of a user's Constraints (visual/mobility/hearing considerations) that drives UI
+adaptation specifically — font size, contrast, voice-first mode — as distinct from the full
+Constraint set an Itinerary must satisfy. _(Provisional — confirm this subset relationship
+with the team; see the open question in the grilling session.)_
+
+**Constraint**:
+A hard requirement an Itinerary must satisfy — accessibility needs (wheelchair access,
+screen-reader-compatible venues), dietary/health needs (e.g. allergies), or group
+composition (e.g. accommodates a family of 4). Constraints filter which venues/activities
+are eligible at all.
+_Avoid_: Preference (a Constraint is non-negotiable; a Preference is not)
+
+**Preference**:
+A soft, ranked interest that shapes Itinerary content without being a hard requirement
+(e.g. enjoys the beach, likes heritage sites, likes cocktails). Preferences rank among
+what Constraints already made eligible, and can change mid-trip — driving the
+Conversational Assistant's dynamic adjustments to an existing Itinerary.
+_Avoid_: Constraint
+
+**Itinerary**:
+The trip plan the Conversational Assistant produces from a user's Constraints and
+Preferences, then iteratively refines through conversation — in response to the user
+changing their Preferences, or to external conditions (e.g. weather) forcing an
+adjustment.
 
 **Conversational Assistant**:
 The primary interaction surface for CapeScape — a voice-and-text chat interface users
