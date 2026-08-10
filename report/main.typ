@@ -56,8 +56,8 @@ change or external conditions (e.g. weather) force an adjustment. Multilingual s
 AR landmark recognition were brainstormed but deferred: multilingual support to a
 future-scaling claim rather than a v1 feature, and AR landmark recognition folded into the
 Wearable Extension's scope. If this approach works, constrained travelers get a single
-conversation instead of a manual filter-and-cross-reference exercise across separate apps,
-and because the underlying model treats Destination generally rather than tying itself to
+conversation instead of a manual filter-and-cross-reference exercise across separate apps.
+And because the underlying model treats Destination generally rather than tying itself to
 Cape Town, the same approach extends to future Destinations without a redesign
 (`docs/adr/0001`).
 
