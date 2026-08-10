@@ -40,6 +40,9 @@ report, interactive prototype (Figma), and slide presentation.
   `report/requirements-draft.md`
 - Roadmap milestone assignees in `report/main.typ` §2.0 (currently `<Assignee>` placeholders)
 - Team representative (title page in `report/main.typ` currently says `TBD`)
+- Deeper literature pass (5-10 papers) to back §1.1's competitive-analysis claim ("no
+  reviewed product or paper does X") — currently resting on 6 papers, which is enough for
+  the citation-count requirement but not an exhaustive market/literature scan
 
 ## Deliverable 2 output (drafted 10/08/2026)
 

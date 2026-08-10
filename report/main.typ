@@ -36,9 +36,9 @@ needs, and group composition as absent rather than as constraints the plan must 
 NaviGPT narrows this gap furthest, pairing a conversational, multimodal interface with
 real-time accessible navigation @zhang2025navigpt — but it is scoped to in-the-moment
 obstacle narration, not to building or revising a multi-day Itinerary. No reviewed product
-lets a traveler state accessibility, dietary/health, and group-composition Constraints once
-and have a Conversational Assistant plan and adapt an entire trip around them. That gap is
-what CapeScape targets.
+or paper lets a traveler state accessibility, dietary/health, and group-composition
+Constraints once and have a Conversational Assistant plan and adapt an entire trip around
+them. That gap is what CapeScape targets.
 
 == 1.2 Brainstormed features and interaction model
 
@@ -66,10 +66,9 @@ whereas stating a Constraint in natural language ("I need wheelchair access and 
 nut-free menu") lets the Assistant do that mapping. The Gulf of Evaluation is the distance
 between the system's state and the user's ability to interpret it; CapeScape narrows this
 by having the Assistant explain *why* a proposed Itinerary satisfies the stated Constraints
-and Preferences, rather than presenting a plan with no rationale. The same framing drives
-the hybrid consent model (`docs/adr/0004`): just-in-time consent prompts, triggered only
-when a feature needs data the user hasn't already granted, keep the system's data use
-legible at the moment it matters instead of buried in an onboarding wall of text.
+and Preferences, rather than presenting a plan with no rationale. A related concern —
+accounting for privacy without cutting users off from a feature outright — shaped the
+hybrid consent model (`docs/adr/0004`), though that decision isn't developed further here.
 
 == 1.4 Project objectives
 

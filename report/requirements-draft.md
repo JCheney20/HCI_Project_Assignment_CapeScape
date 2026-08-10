@@ -10,6 +10,26 @@ Accessibility Profile) follows `CONTEXT.md`. Each requirement traces to one of t
 project objectives in `report/main.typ` §1.4: **(O1)** Constraint satisfaction, **(O2)**
 Preference accommodation, **(O3)** Adaptivity.
 
+**Target system vs. prototype.** The brief requires no code implementation — the deliverable
+is a Figma prototype and this report, not a working backend. Functional requirements below
+describe how the *target product* should behave (e.g. detecting a weather change, running a
+Conversational Assistant with real language understanding). The Figma prototype demonstrates
+each one through a scripted state transition — e.g. a "weather alert" screen the prototype
+jumps to on a tap — rather than a live trigger. Read every "the system shall" below as a
+target-product behavior the prototype simulates, not a claim about what's actually running.
+
+## Objective metrics (draft, feeds Deliverable 6 Survey Design)
+
+The three objectives in `report/main.typ` §1.4 are directions, not yet measurements. Draft
+operationalizations, to be validated once a task-analysis method is chosen (Deliverable 3):
+
+- **O1 Constraint satisfaction** — percentage of generated Itinerary items with zero
+  Constraint violations, audited against test personas (target: 100%).
+- **O2 Preference accommodation** — user-rated relevance of Itinerary content against
+  stated Preferences (1–5 Likert scale).
+- **O3 Adaptivity** — time-to-acceptable-revision and/or user acceptance rate of proposed
+  changes after a Preference or external-condition update.
+
 ## User requirements
 
 High-level needs, stated from the traveler's perspective, independent of implementation:
@@ -50,7 +70,7 @@ High-level needs, stated from the traveler's perspective, independent of impleme
 | ID | Requirement | Rationale |
 |----|-------------|-----------|
 | NFR1 | The mobile interface shall conform to WCAG 2.1 level AA. | Settled team decision (`PLANNING.md`) |
-| NFR2 | Accessibility Profile data shall be stored and transmitted separately from general Preference data, with access scoped to the features that need it. | Accessibility Profile can reveal disability status — higher sensitivity than a beach-vs-heritage preference |
+| NFR2 | Accessibility Profile data shall not be exposed to features or screens that don't need it to function. | Accessibility Profile can reveal disability status — higher sensitivity than a beach-vs-heritage preference. Stated as a policy, not a storage architecture: no backend exists to design against at this stage. |
 | NFR3 | The domain model shall reference "Destination" as the scoping entity, not hardcode "Cape Town," so a second Destination is a data/content addition, not a redesign. | `docs/adr/0001` |
 | NFR4 | The primary v1 prototype shall target mobile; the smart-glasses Wearable Extension is out of scope for the Figma deliverable. | `docs/adr/0002` |
 | NFR5 | Multilingual support shall be described as a future-scaling capability, not implemented as a v1 feature. | Settled team decision |
@@ -75,6 +95,10 @@ High-level needs, stated from the traveler's perspective, independent of impleme
 5. **Low-vision user trusting a suggestion.** *As a low-vision user relying on the voice
    interface, I want to ask "why this place?" and get a short spoken answer, not a wall of
    text I have to parse.* → FR7, NFR6, NFR1.
+6. **Deaf traveler avoiding narration-only tours.** *As a deaf traveler, I want the
+   Assistant to only suggest tours that don't rely on spoken narration alone — captioned,
+   transcript-backed, or sign-language-guided ones — so I'm not paying for an experience I
+   can't follow.* → FR1, FR7.
 
 ## Open gaps for Deliverable 3
 

@@ -14,16 +14,17 @@ redesign.
 _Avoid_: "City" as a domain term (fine as plain English prose, not as an entity name)
 
 **Accessibility Profile**:
-The subset of a user's Constraints (visual/mobility/hearing considerations) that drives UI
-adaptation specifically — font size, contrast, voice-first mode — as distinct from the full
-Constraint set an Itinerary must satisfy. _(Provisional — confirm this subset relationship
-with the team; see the open question in the grilling session.)_
+The subset of a user's Constraints — visual, mobility, and hearing considerations — that
+drives UI adaptation specifically (font size, contrast, voice-first mode) in addition to
+filtering venues, as distinct from dietary/health and group-composition Constraints, which
+filter venues but never drive UI adaptation.
 
 **Constraint**:
 A hard requirement an Itinerary must satisfy — accessibility needs (wheelchair access,
-screen-reader-compatible venues), dietary/health needs (e.g. allergies), or group
-composition (e.g. accommodates a family of 4). Constraints filter which venues/activities
-are eligible at all.
+screen-reader-compatible venues, hearing-loop induction systems, captioned/
+transcript-backed audio guides, sign-language tour availability), dietary/health needs
+(e.g. allergies), or group composition (e.g. accommodates a family of 4). Constraints
+filter which venues/activities are eligible at all.
 _Avoid_: Preference (a Constraint is non-negotiable; a Preference is not)
 
 **Preference**:
